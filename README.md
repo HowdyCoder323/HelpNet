@@ -15,8 +15,8 @@ A platform designed to connect volunteers (helpers) with individuals in need (se
 
 1. **Clone the repository**:
     ```bash
-    git clone https://github.com/your-repository/immediate-volunteering-platform.git
-    cd immediate-volunteering-platform
+    git clone https://github.com/HowdyCoder323/HelpNet.git
+    cd HelpNet
     ```
 
 2. **Install dependencies**:  
