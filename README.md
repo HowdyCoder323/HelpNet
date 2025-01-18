@@ -16,7 +16,7 @@ A platform designed to connect volunteers (helpers) with individuals in need (se
 1. **Clone the repository**:
     ```bash
     git clone https://github.com/HowdyCoder323/HelpNet.git
-    cd HelpNet
+    cd HelpNet-main
     ```
 
 2. **Install dependencies**:  
