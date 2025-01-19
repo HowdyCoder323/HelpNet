@@ -45,12 +45,12 @@ def render_map(user_lat, user_lon, nearby_requests):
         icon=folium.Icon(color='blue', icon='info-sign')
     ).add_to(user_map)
 
-    # Add markers for each nearby SOS request
+    # Add markers for each nearby SOS request with the same icon and color
     for req in nearby_requests:
         folium.Marker(
             location=[req['latitude'], req['longitude']],
             popup=f"Name: {req['name']}<br>Description: {req['description']}<br>Distance: {req['distance_km']} km",
-            icon=folium.Icon(color='red', icon='exclamation-sign')
+            icon=folium.Icon(color='green', icon='exclamation-sign')  # Same icon and color for all requests
         ).add_to(user_map)
 
     # Save map to an HTML representation
@@ -204,5 +204,3 @@ elif choice == "Find Requests":
             st.components.v1.html(map_html, height=600)
         else:
             st.info("No SOS requests found within the specified radius.")
-
-
