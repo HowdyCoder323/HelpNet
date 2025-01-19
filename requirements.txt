@@ -1,7 +1,6 @@
-streamlit
-pandas
-geopy
-sqlite3
-uuid
-geocoder
-folium
+streamlit==1.18.1
+pandas==2.0.3
+geopy==2.3.1
+sqlite3==3.36.0
+geocoder==1.38.1
+folium==0.14.0
