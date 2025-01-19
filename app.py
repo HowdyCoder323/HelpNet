@@ -173,11 +173,11 @@ elif choice == "Find Requests":
     if "lon_find" not in st.session_state:
         st.session_state["lon_find"] = 0.0
 
-    lat = st.number_input("Your Latitude", format="%.6f", value=st.session_state["lat_find"])
-    lon = st.number_input("Your Longitude", format="%.6f", value=st.session_state["lon_find"])
+    lat = st.number_input("Your Latitude", format="%.6f", value=0)
+    lon = st.number_input("Your Longitude", format="%.6f", value=0)
     radius_km = st.slider("Search Radius (km)", min_value=1, max_value=50, value=5)
 
-    if st.button("Use Current Location"):
+    if st.toggle("Use Current Location"):
         current_location = get_current_location()
         if current_location:
             st.session_state["lat_find"], st.session_state["lon_find"] = current_location
@@ -204,3 +204,5 @@ elif choice == "Find Requests":
             st.components.v1.html(map_html, height=600)
         else:
             st.info("No SOS requests found within the specified radius.")
+
+
