@@ -173,8 +173,8 @@ elif choice == "Find Requests":
     if "lon_find" not in st.session_state:
         st.session_state["lon_find"] = 0.0
 
-    lat = st.number_input("Your Latitude", format="%.6f", value=0)
-    lon = st.number_input("Your Longitude", format="%.6f", value=0)
+    lat = st.number_input("Your Latitude", format="%.6f", value=0.0)
+    lon = st.number_input("Your Longitude", format="%.6f", value=0.0)
     radius_km = st.slider("Search Radius (km)", min_value=1, max_value=50, value=5)
 
     if st.toggle("Use Current Location"):
